@@ -31,7 +31,23 @@ const words = [
   'statue',
   'generate',
   'stubborn',
-
+  'cocktail',
+  'runaway',
+  'joke',
+  'developer',
+  'establishment',
+  'hero',
+  'javascript',
+  'nutrition',
+  'revolver',
+  'echo',
+  'siblings',
+  'investigate',
+  'horrendous',
+  'symptom',
+  'laughter',
+  'magic',
+  'master',
   'space',
   'definition'
 ];
@@ -68,6 +84,24 @@ function startMatch() {
   }
 }
 
+// Match currentWord to wordInput
+function matchWords() {
+  if (wordInput.value === currentWord.innerHTML) {
+    message.innerHTML = 'Correct!!!';
+    return true;
+  } else {
+    message.innerHTML = '';
+    return false;
+  }
+}
+
+// Pick & show random word
+function showWord(words) {
+  // Generate random array index
+  const randIndex = Math.floor(Math.random() * words.length);
+  // Output random word
+  currentWord.innerHTML = words[randIndex];
+}
 
 // Countdown timer
 function countdown() {
