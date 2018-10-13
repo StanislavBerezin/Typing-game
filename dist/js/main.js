@@ -51,6 +51,22 @@ function init() {
 }
 
 // Start match
+function startMatch() {
+  if (matchWords()) {
+    isPlaying = true;
+    time = currentLevel + 1;
+    showWord(words);
+    wordInput.value = '';
+    score++;
+  }
+
+  // If score is -1, display 0
+  if (score === -1) {
+    scoreDisplay.innerHTML = 0;
+  } else {
+    scoreDisplay.innerHTML = score;
+  }
+}
 
 
 // Countdown timer
@@ -65,4 +81,12 @@ function countdown() {
   }
   // Show time
   timeDisplay.innerHTML = time;
+}
+
+// Check game status
+function checkStatus() {
+  if (!isPlaying && time === 0) {
+    message.innerHTML = 'Game Over!!!';
+    score = -1;
+  }
 }
