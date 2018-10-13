@@ -1,14 +1,14 @@
 {
-  "name": "wordbeater",
+  "name": "QuickTypie",
   "version": "1.0.0",
-  "description": "Speed typing game written in vanilla JS",
+  "description": "Check your typing speed, developed with html and plain vanila js",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
-  "author": "Brad Traversy",
-  "license": "MIT",
-  "homepage": "https://bradtraversy.github.io/wordbeater",
+  "author": "",
+  "license": "",
+  "homepage": "",
   "dependencies": {
     "gh-pages": "^1.2.0"
   }
